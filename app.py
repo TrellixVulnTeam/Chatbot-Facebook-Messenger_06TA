@@ -103,16 +103,15 @@ def return_message(user_input):
     elif intencao == 'forma_de_pagamento' and len(pedido) > 0:
         listener = 'endereco'
         return 'Tudo bem! E qual vai ser o endereço de entrega?'
-
-        
-    elif listener == 'endereco':
-        return 'Ok, anotado! \n- Muito obrigado pelo pedido, ele chegará em alguns minutos'
-        
-
     elif intencao == 'cancelamento_pedido':
-      pedido.clear()
-      listener =''
-      return  'Pedido cancelado com sucesso'
+        pedido.clear()
+        listener =''
+        return  'Pedido cancelado com sucesso'
+    #elif listener == 'endereco':
+    #    return 'Ok, anotado! \n- Muito obrigado pelo pedido, ele chegará em alguns minutos'
+        
+
+    
     else:
       return  'Desculpe, eu não entendi! \nVocê pode repetir por favor?'
 
@@ -135,7 +134,7 @@ def webhook():
     data = request.get_json()
     log(data)
 
-    if data['object'] =='page':
+    if data['object'] == 'page':
         for entry in data['entry']:
             for messaging_event in entry['messaging']:
                 sender_id = messaging_event['sender']['id']
