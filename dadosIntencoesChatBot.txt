@@ -49,32 +49,43 @@ pedido - to afim de pegar um de Queijo Parmesão
 pedido - Gostaria de 2 de salza
 pedido - 2 de pizza
 pedido - 2 de salsa
-respostapositiva - sim
-respostapositiva - positivo
-respostapositiva - isso mesmo
-respostapositiva - só isso mesmo
-respostapositiva - com certeza
-respostapositiva - ok
-respostapositiva - aham
-respostanegativa - não,
-respostanegativa - negativo
-respostanegativa - nop
-respostanegativa - quero não obrigado
-respostanegativa - não obrigado
-cancelamentopedido - cancela
-cancelamentopedido - cancela o pedido
-cancelamentopedido - cancelar
-cancelamentopedido - nao quero mais pedir
-cancelamentopedido - deixa pra lá
-formadepagamento - dinheiro
-formadepagamento - cartao
-formadepagamento - money
-formadepagamento - dindin
-formadepagamento - pode ser no dinheiro?
-formadepagamento - cartão meu consagrado
-formadepagamento - grana
-formadepagamento - Em dinheiro mesmo
-formadepagamento - só no cartao
-formadepagamento - visa
-formadepagamento - mastercard
-formadepagamento - elo
+resposta_positiva - sim
+resposta_positiva - positivo
+resposta_positiva - isso mesmo
+resposta_positiva - só isso mesmo
+resposta_positiva - com certeza
+resposta_positiva - ok
+resposta_positiva - aham
+resposta_negativa - não,
+resposta_negativa - negativo
+resposta_negativa - nop
+resposta_negativa - quero não obrigado
+resposta_negativa - não obrigado
+cancelamento_pedido - cancela
+cancelamento_pedido - cancela o pedido
+cancelamento_pedido - cancelar
+cancelamento_pedido - nao quero mais pedir
+cancelamento_pedido - deixa pra lá
+forma_de_pagamento - dinheiro
+forma_de_pagamento - money
+forma_de_pagamento - dindin
+forma_de_pagamento - pode ser no dinheiro?
+forma_de_pagamento - grana
+forma_de_pagamento - Em dinheiro mesmo
+forma_de_pagamento - cartao
+forma_de_pagamento - cartão meu consagrado
+forma_de_pagamento - só no cartao
+forma_de_pagamento - visa
+forma_de_pagamento - mastercard
+forma_de_pagamento - elo
+saudacao - ola
+saudacao - i ae
+saudacao - eae
+saudacao - tudo bem
+saudacao - como vai
+saudacao - oi
+saudacao - oii
+saudacao - oiii
+saudacao - boa tarde
+saudacao - boa noite
+saudacao - bom dia

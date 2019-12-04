@@ -2,6 +2,10 @@
 import os,sys
 from flask import Flask, request
 from pymessenger.bot import Bot
+from pymessager.message import Messager
+import json
+client = Messager("EAAGfWvt5cFABABZBFY3NL9JHFKEYn9dwswgCDgZAZA2DIDRL8fysezOqZCZAGbuOiKLkeKebNtrASCHODKFkefZAnK0chi3YpZAj0VUgHYqfN49mFUeFAn9ZA7eLvARngJ2SE2SzLR2Dh3h66NhyXM2ydafMvCY7ZAWQI8BLYWZAUKux4wbKielMbU")
+
 
 
 #import to chatbot
@@ -120,38 +124,59 @@ TOKEN_PAGE= "EAAGfWvt5cFABABZBFY3NL9JHFKEYn9dwswgCDgZAZA2DIDRL8fysezOqZCZAGbuOiK
 bot = Bot(TOKEN_PAGE)
 app = Flask(__name__)
 
-@app.route('/',methods=['GET'])
-def verify():
-    if request.args.get("hub.mode")=="subscribe" and request.args.get("hub.challenge"):
-        if not request.args.get("hub.verify_token")== "braba" :
-            return "Erro de verificação de token", 403
-        return request.args["hub.challenge"],200
-    return "funcionando", 200
+@app.route('/', methods=["GET"])
+def fb_webhook():
+    verification_code = 'braba'
+    verify_token = request.args.get('hub.verify_token')
+    if verification_code == verify_token:
+        return request.args.get('hub.challenge'), 200
+    return "show",200
 
+#@app.route('/',methods=['GET'])
+#def verify():
+#    if request.args.get("hub.mode")=="subscribe" and request.args.get("hub.challenge"):
+#        if not request.args.get("hub.verify_token")== "braba" :
+#            return "Erro de verificação de token", 403
+#        return request.args["hub.challenge"],200
+#    return "funcionando", 200
 
-@app.route("/", methods=['POST'])
-def webhook():
-    data = request.get_json()
-    log(data)
+@app.route("/", methods=["POST"])
+def fb_receive_message():
+    message_entries = json.loads(request.data.decode('utf8'))['entry']
+    #print(message_entries)
+    for entry in message_entries:
+        for message in entry['messaging']:
+            if message.get('message'):
+                sender_id ="{sender[id]}".format(**message)
+                print(sender_id)
+                response = return_message("{message[text]}".format(**message))
+                print(response) 
+                bot.send_text_message(sender_id, response) 
+                return "eae"
 
-    if data['object'] == 'page':
-        for entry in data['entry']:
-            for messaging_event in entry['messaging']:
-                sender_id = messaging_event['sender']['id']
-                recipient_id = messaging_event['recipient']['id']
-
-                if messaging_event.get('message'):
-                    if 'text' in messaging_event['message']:
-                        messaging_text = messaging_event['message']['text']
-                    else :
-                        messaging_text= 'no text'
-                        
-                    response = return_message(messaging_text)
-                    bot.send_text_message(sender_id, response)
-
-    return "ok",200
-
-
+#@app.route("/", methods=['POST'])
+#def webhook():
+#    data = request.get_json()
+#    log(data)
+#
+#    if data['object'] == 'page':
+#        for entry in data['entry']:
+#            for messaging_event in entry['messaging']:
+#                sender_id = messaging_event['sender']['id']
+#                recipient_id = messaging_event['recipient']['id']
+#
+#                if messaging_event.get('message'):
+#                    if 'text' in messaging_event['message']:
+#                        messaging_text = messaging_event['message']['text']
+#                    else :
+#                        messaging_text= 'no text'
+#                        
+#                    response = return_message(messaging_text)
+#                    bot.send_text_message(sender_id, response)
+#
+#    return "ok",200
+#
+#
 def log(message):
     print(message)
     sys.stdout.flush()
