@@ -1,0 +1,80 @@
+opcoes - Açúcar e canela
+opcoes - Banana com Açúcar
+opcoes - Cheddar
+opcoes - Chocolate
+opcoes - Chocolate branco
+opcoes - Chocolate com avelã
+opcoes - Coco com açúcar
+opcoes - Doce de leite
+opcoes - Dog
+opcoes - Napolitano
+opcoes - Ovomaltine com Chocolate
+opcoes - Pepperoni
+opcoes - Pizza
+opcoes - Queijo Parmesão
+opcoes - Requeijão
+opcoes - Salsa
+cardapio - Gostaria de ver o cardápio por favor.
+cardapio - Eu quero ver as opções.
+cardapio - me ve um pretel
+cardapio - quero um pretzel
+cardapio - ainda nao sei
+cardapio - me mostra as opções?
+cardapio - ola meu querido eu quero ver o menu
+cardapio - poderia me enviar o menu?
+cardapio - o que tem pra hoje?
+cardapio - oii
+cardapio - quero ver o cardapio por gentileza
+cardapio - quero saber os preços
+cardapio - Gostaria de ver o cardápio por favor.
+cardapio - oii
+cardapio - me da o menu
+cardapio - quais sao as opções
+cardapio - ola tem como me mostrar o cardapio?
+pedido - Gostaria de um pretzel de Açúcar e canela e 2 de Chocolate com avelã, por favor
+pedido - me vê um de Requeijão então
+pedido - Quero um dog e um pretel de doce de leite
+pedido - Banana com Açucar
+pedido - ola tudo bem, gostaria de um de chocolate e dois de chocolate branco
+pedido - quero um de pizza
+pedido - um de Banana com Açucar e 5 de dog
+pedido - quero 2 de pepperoni e 2 de napolitano
+pedido - então me vê uma de Doce de leite
+pedido - quero tres de ovomaltine com chocolate, por favor
+pedido - então me vê uma só o de Napolitano mesmo
+pedido - quero tres de requeijão e 1 de salsa, por favor
+pedido - Pepperoni
+pedido - Gostaria de 4 de Chocolate com avelã
+pedido - to afim de pegar um de Queijo Parmesão
+pedido - Gostaria de 2 de salza
+pedido - 2 de pizza
+pedido - 2 de salsa
+respostapositiva - sim
+respostapositiva - positivo
+respostapositiva - isso mesmo
+respostapositiva - só isso mesmo
+respostapositiva - com certeza
+respostapositiva - ok
+respostapositiva - aham
+respostanegativa - não,
+respostanegativa - negativo
+respostanegativa - nop
+respostanegativa - quero não obrigado
+respostanegativa - não obrigado
+cancelamentopedido - cancela
+cancelamentopedido - cancela o pedido
+cancelamentopedido - cancelar
+cancelamentopedido - nao quero mais pedir
+cancelamentopedido - deixa pra lá
+formadepagamento - dinheiro
+formadepagamento - cartao
+formadepagamento - money
+formadepagamento - dindin
+formadepagamento - pode ser no dinheiro?
+formadepagamento - cartão meu consagrado
+formadepagamento - grana
+formadepagamento - Em dinheiro mesmo
+formadepagamento - só no cartao
+formadepagamento - visa
+formadepagamento - mastercard
+formadepagamento - elo
